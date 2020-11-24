@@ -5,14 +5,16 @@ import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 class App extends Component {
   render(){
     return (
-      <Wrapper >
-        <Router>
+      <Router>
+      <Wrapper>
+        
           <Route
-           path="/home"
+           path="/"
            component={Home}
           />
-        </Router>
+      
         </Wrapper>
+        </Router>
     )
   }
 }

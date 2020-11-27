@@ -25,15 +25,20 @@ class Contact extends Component {
             }
         
     }
+
+    submitForm = () => {
+        alert("Form Submitted. Thank you very much!");
+    }
+
     render(){
         return(
             <section className="page-section" id="contact">
             <div className="container">
                 <div className="text-center">
-                    <h2 className="section-heading text-uppercase">Contact Us</h2>
+                    <h2 className="section-heading text-uppercase">Contac=t Us</h2>
                     <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
-                <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                <form id="contactForm" onSubmit={e => this.submitForm(e)} name="sentMessage" novalidate="novalidate">
                     <div className="row align-items-stretch mb-5">
                         
                         {
@@ -55,7 +60,11 @@ class Contact extends Component {
                     <div className="text-center">
                         <div id="success"></div>
                         <button 
-                        className="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Send Message</button>
+                        className="btn btn-primary btn-xl text-uppercase" 
+                        id="sendMessageButton" 
+                        type="submit"
+                    
+                        >Send Message</button>
                     </div>
                 </form>
             </div>

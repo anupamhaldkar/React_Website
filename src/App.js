@@ -12,7 +12,7 @@ class App extends Component {
       <Wrapper>
         
           <Route
-          exact={true}
+          exact={true}  
            path="/home"
            component={Home}
           />

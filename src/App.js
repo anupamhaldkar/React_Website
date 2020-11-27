@@ -5,7 +5,7 @@ import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 //pages
 import Home from './components/pages/Home';
 import About from './components/pages/About';
-import Contact from './components/pages/Form';
+import Contact from './components/pages/Contact';
 
 class App extends Component {
   render(){

@@ -67,7 +67,7 @@ export default withFormik({
         message:'',
     }),
     validationSchema: Yup.object().shape({
-
+        name: Yup.string().required('You must give us your name')
     }),
     handleSubmit: (values, {setSubmitting}) => {
         console.log("VALUES", values);

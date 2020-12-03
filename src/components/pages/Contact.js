@@ -66,7 +66,9 @@ export default withFormik({
         phone:'',
         message:'',
     }),
-    
+    validationSchema: Yup.object().shape({
+
+    }),
     handleSubmit: (values, {setSubmitting}) => {
         console.log("VALUES", values);
         alert("You have submitted the form",JSON.stringify(values));

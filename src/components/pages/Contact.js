@@ -67,7 +67,7 @@ export default withFormik({
         message:'',
     }),
     validationSchema: Yup.object().shape({
-        name: Yup.string().required('You must give us your name'),
+        name: Yup.string().min(3, 'Come on bro, your name is longer than that.').required('You must give us your name.'),
         email: Yup.string().email('You need to give us a valid email').required('We need your email.'),
         phone: Yup.string()
             .min(10, 'Please provide your 10 digit phone number.')

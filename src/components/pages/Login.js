@@ -13,6 +13,9 @@ class Login extends Component {
             <div className="container">
                 <div className="login-form">
                     <div className="row">
+                        <h1>Login</h1>
+                    </div>
+                    <div className="row">
                         {fields.map((f,i)=>{
                         return(
                             <div className="col-md-12">

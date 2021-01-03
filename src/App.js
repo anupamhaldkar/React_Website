@@ -6,29 +6,51 @@ import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import Home from './components/pages/Home';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
-
+import Login from './components/pages/Login';
+import AdminWrapper from './components/AdminWrapper';
 class App extends Component {
   render(){
     return (
       <Router>
-      <Wrapper>
+        <Route
+        path="/admin"
+        render={props =>(
+          <AdminWrapper>
+          <Login/>
+          </AdminWrapper>
+        )}
+        />
+
+    
         
           <Route
           exact={true}  
            path="/"
-           component={Home}
+           component={props=>(
+             <Wrapper>
+               <Home {...props}/>
+             </Wrapper>
+           )}
           />
           <Route
            path="/about"
-           component={About}
+           component={props=>(
+            <Wrapper>
+              <About {...props}/>
+            </Wrapper>
+          )}
            />
 
            <Route 
            path="/contact"
-           component={Contact}
+           component={props=>(
+            <Wrapper>
+              <Contact {...props}/>
+            </Wrapper>
+          )}
            />
       
-        </Wrapper>
+    
         </Router>
     )
   }

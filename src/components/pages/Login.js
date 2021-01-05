@@ -16,6 +16,7 @@ class Login extends Component {
                         <h1>Login</h1>
                     </div>
                     <div className="row">
+                        <form>
                         {fields.map((f,i)=>{
                         return(
                             <div className="col-md-12">
@@ -32,6 +33,10 @@ class Login extends Component {
                         </div>
                         )
                     })}
+                    <div className="col-md-12">
+                        <button className="btn btn-primary">Login</button>
+                    </div>
+                    </form>
                     </div>
                 </div>
             </div>

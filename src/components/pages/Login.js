@@ -16,7 +16,7 @@ class Login extends Component {
                         <h1>Login</h1>
                     </div>
                     <div className="row">
-                        <form>
+                        <form onSubmit={this.props.handleSubmit}>
                         {fields.map((f,i)=>{
                         return(
                             <div className="col-md-12">
